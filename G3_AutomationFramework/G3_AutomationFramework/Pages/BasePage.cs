@@ -8,11 +8,12 @@ using System.Threading.Tasks;
 
 namespace G3_AutomationFramework.Pages
 {
-	class BasePage
+	public class BasePage
 	{
 		public BasePage(IWebDriver driver)
 		{
-			PageFactory.InitElements(driver, this);
+			//PageFactory.InitElements(driver, this);
+			SeleniumExtras.PageObjects.PageFactory.InitElements(driver, this);
 		}
 	}
 }

@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestProject", "UnitTest
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebDriverG3", "WebDriverG3\WebDriverG3.csproj", "{79E090A9-2A3B-4CE3-AAC2-065E073E538A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebDriver", "WebDriver\WebDriver.csproj", "{0ED72344-CD0F-4C20-A13E-F4F87BC3B782}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebDriver321", "WebDriver\WebDriver321.csproj", "{0ED72344-CD0F-4C20-A13E-F4F87BC3B782}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
