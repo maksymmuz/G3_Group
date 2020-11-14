@@ -15,7 +15,7 @@ namespace EtsyAutomationTests.Pages
 		}
 
 		[FindsBy(How = How.XPath,
-			Using = "//div[@data-search-results]//div[contains(@class,'v2-listing-card__info')]//h3")]
+			Using = "//div[@data-search-results]//h3[@class='text-gray text-truncate mb-xs-0 text-body ']")]
 		public IList<IWebElement> foundTextItemList;
 	}
 }

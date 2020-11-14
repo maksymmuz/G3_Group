@@ -10,27 +10,11 @@ namespace EtsyAutomationTests.Pages
 			PageFactory.InitElements(driver, this);
 		}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 		[FindsBy(How = How.Id, Using = "global-enhancements-search-query")]
 		public IWebElement searchField;
 
 		[FindsBy(How = How.CssSelector, Using = "button[value='Search']")]
 		public IWebElement searchButton;
+
 	}
 }

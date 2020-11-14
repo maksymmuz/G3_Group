@@ -8,16 +8,9 @@ namespace EtsyAutomationTests.Pages
 	{
 		public EtsyMainPage(IWebDriver driver) : base(driver)
 		{
-			searchArea = new SearchArea(driver);
+			SearchArea = new SearchArea(driver);
 		}
 
-		public SearchArea searchArea;
-
-		// should be moved to separate class
-		//[FindsBy(How = How.Id, Using = "global-enhancements-search-query")]
-		//public IWebElement searchField;
-
-		//[FindsBy(How = How.CssSelector, Using = "button[value='Search']")]
-		//public IWebElement searchButton;
+		public SearchArea SearchArea { get; }		
 	}
 }
