@@ -54,11 +54,12 @@ namespace DB
 		// Select statement
 		public void SelectList()
 		{
-			string query = "SELECT idNumber FROM seleniumTable";
+			string query = "SELECT * FROM seleniumTable";
+			//string query = "SELECT idNumber FROM seleniumTable";
 			List<int> resultSet = new List<int>();
 
 			// Open Connection
-			if (OpenConnection()==true)
+			if (OpenConnection() == true)
 			{
 				// Create Mysql Command
 				MySqlCommand cmd = new MySqlCommand(query, connection);
@@ -68,12 +69,49 @@ namespace DB
 				while (reader.Read())
 				{
 					resultSet.Add(Convert.ToInt32(reader["IdNumber"]));
+					//Console.WriteLine((reader["IdNumber"]) + " " + (reader["login"]) + " " + (reader["passWord"]));
 				}
 
 				foreach (var id in resultSet)
 				{
 					Console.WriteLine(id);
 				}
+
+				//Close connection
+				CloseConnection();
+			}
+			else
+			{
+				throw new Exception("No connection to Data base");
+			}
+		}
+
+		// Count statements
+		public void Count()
+		{
+			string query = "SELECT Count(*) FROM seleniumTable ";
+			string count /*= 0*/;
+
+			// Open connection
+			if (OpenConnection() == true)
+			{
+				// Create Mysql command
+				MySqlCommand cmd = new MySqlCommand(query, connection);
+
+				// ExecutScalar will return one value
+
+				//var qwe = cmd.ExecuteScalar();
+
+				count = /*int.Parse(*/cmd.ExecuteScalar().ToString()/*)*/;
+
+				Console.WriteLine(count);
+
+				//Close connection
+				CloseConnection();
+			}
+			else
+			{
+				throw new Exception("No connection to Data base");
 			}
 		}
 	}

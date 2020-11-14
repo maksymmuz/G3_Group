@@ -13,7 +13,7 @@ namespace DB
 			DbConnect dbConnect = new DbConnect();
 
 			dbConnect.SelectList();
-			//dbConnect.Count();
+			dbConnect.Count();
 
 			Console.ReadKey();
 		}
