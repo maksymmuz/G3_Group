@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JenkinsProject", "JenkinsPr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DB", "DB\DB.csproj", "{74AA34D0-E666-4815-AC79-659DF0DACF17}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Waits", "Waits\Waits.csproj", "{AEF2BA6E-6AA7-4D11-84B3-5E1E74F488AB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{74AA34D0-E666-4815-AC79-659DF0DACF17}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{74AA34D0-E666-4815-AC79-659DF0DACF17}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{74AA34D0-E666-4815-AC79-659DF0DACF17}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AEF2BA6E-6AA7-4D11-84B3-5E1E74F488AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AEF2BA6E-6AA7-4D11-84B3-5E1E74F488AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AEF2BA6E-6AA7-4D11-84B3-5E1E74F488AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AEF2BA6E-6AA7-4D11-84B3-5E1E74F488AB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
