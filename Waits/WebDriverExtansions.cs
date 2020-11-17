@@ -4,9 +4,6 @@ using OpenQA.Selenium.Support.UI;
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Waits
 {
@@ -69,9 +66,6 @@ namespace Waits
 		{
 			driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(timeout);
 		}
-
-		//public static void ExplicitWaitUntil<TResult>(this IWebDriver driver, Func<TResult> condition, int timeout = 5, Type TWebDriverException = null) =>
-		//	ExplicitWaitUntil(driver, d => condition(), timeout, TWebDriverException);
 
 		public static void ExplicitWaitUntil<TResult>(this IWebDriver driver, Func<IWebDriver, TResult> condition, int timeout = 5, Type TWebDriverException = null)
 		{

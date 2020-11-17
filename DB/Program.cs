@@ -12,7 +12,7 @@ namespace DB
 		{
 			DbConnect dbConnect = new DbConnect();
 
-			dbConnect.SelectList();
+			//dbConnect.SelectList();
 			dbConnect.Count();
 
 			Console.ReadKey();

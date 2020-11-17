@@ -12,7 +12,8 @@ namespace Waits
 			driver.SetImplicitWait(1);
 			var locator = By.CssSelector("Some cssSelector");
 
-			driver.ExplicitWaitUntil(SeleniumExtras.WaitHelpers.ExpectedConditions.InvisibilityOfElementLocated(locator));
+			driver.ExplicitWaitUntil(SeleniumExtras.WaitHelpers.ExpectedConditions.InvisibilityOfElementLocated(locator), 10, typeof(WebDriverTimeoutException));
+
 			driver.SetImplicitWait(10);
 		}
 

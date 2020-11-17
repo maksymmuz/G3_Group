@@ -22,9 +22,10 @@ namespace Waits
 
 			wait.PollingInterval = TimeSpan.FromMilliseconds(600);
 
-
+			wait.Timeout = TimeSpan.FromSeconds(10);
 						
 			wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(element));
+			wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(byElement));
 
 			CustomWaits.WaitForElementIsClickable(driver, element, 3);
 		}

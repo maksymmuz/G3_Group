@@ -23,8 +23,8 @@ namespace DB
 		private void Initialize()
 		{
 			string connectionString;
-			connectionString = "SERVER=" + server + ";" + "DATABASE=" + database + ";" +
-				"UID=" + uid + ";" + "PASSWORD=" + password + ";";
+
+			connectionString = "SERVER=" + server + ";" + "DATABASE=" + database + ";" + "UID=" + uid + ";" + "PASSWORD=" + password + ";";
 
 			connection = new MySqlConnection(connectionString);
 
@@ -48,7 +48,7 @@ namespace DB
 		// Close connection
 		private void CloseConnection()
 		{
-			connection.Close();
+			connection. Close();
 		}
 
 		// Select statement
@@ -68,8 +68,8 @@ namespace DB
 
 				while (reader.Read())
 				{
-					resultSet.Add(Convert.ToInt32(reader["IdNumber"]));
-					//Console.WriteLine((reader["IdNumber"]) + " " + (reader["login"]) + " " + (reader["passWord"]));
+					//resultSet.Add(Convert.ToInt32(reader["IdNumber"]));
+					Console.WriteLine((reader["IdNumber"]) + " " + (reader["login"]) + " " + (reader["passWord"]));
 				}
 
 				foreach (var id in resultSet)
@@ -89,8 +89,8 @@ namespace DB
 		// Count statements
 		public void Count()
 		{
-			string query = "SELECT Count(*) FROM seleniumTable ";
-			string count /*= 0*/;
+			string query = "SELECT Count(*) FROM seleniumTable";
+			int count = -1;
 
 			// Open connection
 			if (OpenConnection() == true)
@@ -102,7 +102,7 @@ namespace DB
 
 				//var qwe = cmd.ExecuteScalar();
 
-				count = /*int.Parse(*/cmd.ExecuteScalar().ToString()/*)*/;
+				count = int.Parse(cmd.ExecuteScalar().ToString());
 
 				Console.WriteLine(count);
 
